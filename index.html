@@ -1,186 +1,192 @@
 <!DOCTYPE html>
-<html lang="eng">
-	<head>
-	
-		<title> LIVE2GETHER</title>
-		<link rel="icon" href="images/logo.png">
-		<link rel="stylesheet" href="style.css">
-	</head>
-		<body>
-		<div class ="content">
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LIVE2GETHER</title>
+	<link rel="icon" href="images/logo.png">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!--
+		=> Ordered List to be removed
+	    => All li to be removed, It's not li.. Give some class like: class="numbering"
+		=> All css to be removed: Strong, em, br etc
+		=> Match similar looking things in same classes
+		=> All textarea should be of same size: rows & cols
+		=> Note: Single element can have multiple classes
+	-->
+	<main>
+		<header>
+			<h1>LIVE2GETHER</h1>
+			<img src="./images/logo.png" alt="LIVE2GETHER Logo" width="100" height="100">
+			<h4>Serviced Apartments Survey Form</h4>
+		</header>
 		<form>
-			<fieldset >
-				<legend><strong>LIVE2GETHER SURVEY FORM </strong></legend>
-				
-					<ol type = "1">
+			<fieldset>
+				<legend>Accommodation</legend>
+				<ol type="1">  
 					<li>If on rent, where?:
-					<input type="radio" id="H" name ="rent" value="hostel">
-					<label> Hostel </label>
-					<input type="radio" id="P" name ="rent" value="PG">
-					<label> PG </label>
-					<input type="radio" id="F" name ="rent" value="Flat">
-					<label> Flat </label></li><br>
-					
+						<label for="rent-hostel"><input id="rent-hostel" type="radio" name="where-rent"
+								value="hostel" />Hostel</label>
+						<label for="rent-pg"><input id="rent-pg" type="radio" name="where-rent" value="pg" />PG</label>
+						<label for="rent-flat"><input id="rent-flat" type="radio" name="where-rent"
+								value="flat" />Flat</label>
+					</li>
 					<li>Facilities you get:</li>
-					<input type="checkbox" id="l1" name ="FYG" value="FW">
-					<label> Free Wi-Fi </label>
-					<input type="checkbox" id="l2" name ="FYG" value="FL">
-					<label> Free Laundry </label>
-					<input type="checkbox" id="l3" name ="FYG" value="PND">
-					<label> Pickup & Drop </label>
-					<input type="checkbox" id="l4" name ="FYG" value="DS">
-					<label> Delivery Services </label>
-					<input type="checkbox" id="l5" name ="FYG" value="FC">
-					<label> Free Cleaning </label><br>
-					<input type="checkbox" id="l6" name ="FYG" value="OS">
-					<label> Other Services </label><br>
-					<textarea rows="4" cols="50" ></textarea><br><br>
-					
+					<label for="facilities-wifi"><input id="facilities-wifi" type="checkbox" name="facilities-wifi"
+							value="wifi">Free WiFi</label>
+					<label for="facilities-laundry"><input id="facilities-laundry" type="checkbox"
+							name="facilities-laundry" value="laundry">Free Laundry</label>
+					<label for="facilities-pickup"><input id="facilities-pickup" type="checkbox"
+							name="facilities-pickup" value="pickup">Pickup & Drop</label>
+					<label for="facilities-delivery"><input id="facilities-delivery" type="checkbox"
+							name="facilities-delivery" value="delivery">Delivery Services</label>
+					<label for="facilities-cleaning"><input id="facilities-cleaning" type="checkbox"
+							name="facilities-cleaning" value="cleaning">Free Cleaning</label>
+					<label for="facilities-others-textarea"><textarea id="facilities-others-textarea" rows="4" cols="50"
+							placeholder="Other Services like.."></textarea></label>
 					<li>Amenities you get free of cost:</li>
-					<input type="checkbox" id="la" name ="AYGT" value="TV">
-					<label> TV </label>
-					<input type="checkbox" id="lb" name ="AYGT" value="Fridge">
-					<label> Refrigerator </label>
-					<input type="checkbox" id="lc" name ="AYGT" value="AC">
-					<label> Air Conditioner </label>
-					<input type="checkbox" id="ld" name ="AYGT" value="fur">
-					<label> Furniture </label>
-					<input type="checkbox" id="le" name ="AYGT" value="WP">
-					<label> Water Purifier  </label>
-					<input type="checkbox" id="lf" name ="AYGT" value="KU">
-					<label> Kitchen and Utensils  </label><br>
-					<input type="checkbox" id="lg" name ="AYGT" value="BI">
-					<label> ]Beautiful Interiors  </label><br><br>
-					
-					<li> 
-					<label>Present Rent:&nbsp;&nbsp;&nbsp;&#8377</label>
-					<input type = number id="la" name="PR" >
-					</li> <br>
-					
-					
-					<li>Any timing issues : 
-					<input type="radio" id="tim" name ="ATI" value="Y">
-					<label> YES </label>
-					<input type="radio" id="iss" name ="ATI" value="N">
-					<label> NO </label></li><br>
-					
-					<li> Friends can come over : 
-					<input type="radio" id="fri" name ="FCO" value="Yes">
-					<label> YES </label>
-					<input type="radio" id="end" name ="FCO" value="No">
-					<label> NO </label>
-					<input type="radio" id="st" name ="FCO" value="st">
-					<label> Sometimes </label></li><br>
-					
-					<li> Complain resolution : 
-					<input type="radio" id="ot" name ="CR" value="ot">
-					<label> On Time </label>
-					<input type="radio" id="del" name ="CR" value="del">
-					<label> Delayed</label>
-					<input type="radio" id="nv" name ="CR" value="nv">
-					<label> Never </label></li><br>
-					
+					<label for="amenities-tv"><input id="amenities-tv" type="checkbox" name="amenities-tv"
+							value="tv">TV</label>
+					<label for="amenities-refrigerator"><input id="amenities-refrigerator" type="checkbox"
+							name="amenities-refrigerator" value="refrigerator">Refrigerator</label>
+					<label for="amenities-ac"><input id="amenities-ac" type="checkbox" name="amenities-ac"
+							value="ac">Air Conditioner</label>
+					<label for="amenities-furniture"><input id="amenities-furniture" type="checkbox"
+							name="amenities-furniture" value="furniture">Furniture</label>
+					<label for="amenities-purifier"><input id="amenities-purifier" type="checkbox"
+							name="amenities-purifier" value="water purifier">Water Purifier</label>
+					<label for="amenities-utensils"><input id="amenities-utensils" type="checkbox"
+							name="amenities-utensils" value="utensils">Kitchen and Utensils</label>
+					<li>
+						<label for="rent-present">Present Rent: &#8377</label><input id="rent-present" type="text">
+					</li>
+					<li>Any timing issues :
+						<label for="timing-yes"><input id="timing-yes" type="radio" name="timing-issue"
+								value="yes">Yes</label>
+						<label for="timing-no"><input id="timing-no" type="radio" name="timing-issue"
+								value="no">No</label>
+					</li><br>
+					<li> Friends can come over :
+						<label for="friends-visit-yes"><input id="friends-visit-yes" type="radio" name="friends-visit"
+								value="yes"> Yes</label>
+						<label for="friends-visit-no"><input id="friends-visit-no" type="radio" name="friends-visit"
+								value="no"> No</label>
+						<label for="friends-visit-sometimes"><input id="friends-visit-sometimes" type="radio"
+								name="friends-visit" value="sometimes"> Sometimes</label>
+					</li>
+					<li> Complain resolution :
+						<label for="complain-resolution-ontime"><input id="complain-resolution-ontime" type="radio"
+								name="complain-resolution" value="on time">On Time</label>
+						<label for="complain-resolution-delayed"><input id="complain-resolution-delayed" type="radio"
+								name="complain-resolution" value="delayed">Delayed</label>
+						<label for="complain-resolution-never"><input id="complain-resolution-never" type="radio"
+								name="complain-resolution" value="never">Never</label>
+					</li>
 					<li>Are you satisfied with your present accommodation? :
-					<input type="radio" id="ayc1" name ="AYC" value="Yes">
-					<label> YES </label>
-					<input type="radio" id="ayc2" name ="AYC" value="No">
-					<label> NO </label></li><br>
-					
+						<label for="satisfied-yes"><input id="satisfied-yes" type="radio" name="satisfied"
+								value="yes">Yes</label>
+						<label for="satisfied-no"><input id="satisfied-no" type="radio" name="satisfied"
+								value="no">Yes</label>
+					</li>
 					<li> <strong>Expectations </strong>regarding rented accommodation :</li>
-					<input type="checkbox" id="exp1" name ="EXP" value="fwi">
-					<label> Free wifi  </label>
-					<input type="checkbox" id="exp2" name ="EXP" value="fl">
-					<label>Free Laundry </label>
-					<input type="checkbox" id="exp3" name ="EXP" value="pnd">
-					<label>Pick n Drop </label>
-					<input type="checkbox" id="exp4" name ="EXP" value="ds">
-					<label>Delivery Services </label>
-					<input type="checkbox" id="exp5" name ="EXP" value="fc">
-					<label>Free Cleaning </label><br>
-					<input type="checkbox" id="exp6" name ="EXP" value="tv">
-					<label>TV</label>
-					<input type="checkbox" id="exp7" name ="EXP" value="frid">
-					<label>Fridge</label>
-					<input type="checkbox" id="exp8" name ="EXP" value="ac">
-					<label>AC</label>
-					<input type="checkbox" id="exp9" name ="EXP" value="fur">
-					<label>Furniture</label>
-					<input type="checkbox" id="exp10" name ="EXP" value="bi">
-					<label>Beautiful Interiors </label>
-					<input type="checkbox" id="exp11" name ="EXP" value="wp">
-					<label>Water Purifier</label>
-					<input type="checkbox" id="exp12" name ="EXP" value="ku">
-					<label>Kitchen and utensils</label>
-					<input type="checkbox" id="exp13" name ="EXP" value="ot">
-					<label>Others</label><br>
-					<textarea rows="4" cols="50" >other services</textarea><br>
-					
-					
-					<li>If you get the same or more services for the same or lower rent, will you shift?: 
-					<input type="checkbox" id="liv1" name ="liv" value="Yes">
-					<label> YES </label>
-					<input type="checkbox" id="liv2" name ="liv" value="No">
-					<label> NO </label></li><br>
-					</ol>
+					<label for="expectations-wifi"><input id="expectations-wifi" type="checkbox" name="expectations"
+							value="wifi">Free WiFi</label>
+					<label for="expectations-laundry"><input id="expectations-laundry" type="checkbox"
+							name="expectations" value="laundry">Free Laundry</label>
+					<label for="expectations-pickup"><input id="expectations-pickup" type="checkbox" name="expectations"
+							value="pickup">Pick n Drop</label>
+					<label for="expectations-delivery"><input id="expectations-delivery" type="checkbox"
+							name="expectations" value="delivery">Delivery Services</label>
+					<label for="expectations-cleaning"><input id="expectations-cleaning" type="checkbox"
+							name="expectations" value="cleaning">Free Cleaning</label>
+					<label for="expectations-tv"><input id="expectations-tv" type="checkbox" name="expectations"
+							value="tv">TV</label>
+					<label for="expectations-fridge"><input id="expectations-fridge" type="checkbox" name="expectations"
+							value="fridge">Fridge</label>
+					<label for="expectations-ac"><input id="expectations-ac" type="checkbox" name="expectations"
+							value="ac">AC</label>
+					<label for="expectations-furniture"><input id="expectations-furniture" type="checkbox"
+							name="expectations" value="furniture">Furniture</label>
+					<label for="expectations-interior"><input id="expectations-interior" type="checkbox"
+							name="expectations" value="interiors">Beautiful Interiors</label>
+					<label for="expectations-utensil"><input id="expectations-utensil" type="checkbox"
+							name="expectations" value="utensils">Kitchen and Utensils</label>
+					<label for="expectations-textarea"><textarea id="expectations-textarea" rows="4" cols="50"
+							name="expectations-textarea" placeholder="Other Expectations like..."></textarea> </label>
+					<li>If you get the same or more services for the same or lower rent, will you shift?:
+						<label for="will-shift-yes"><input id="will-shift-yes" type="radio" name="will-shift"
+								value="yes">Yes</label>
+						<label for="will-shift-no"><input id="will-shift-no" type="radio" name="will-shift"
+								value="no">No</label>
+					</li>
+				</ol>
 			</fieldset>
-			
-			<fieldset >
-				<legend><strong><em>LIVE2GETHER SERVICED APARTMENTS</em></strong></legend>
-				<strong><em>&#9962;Welcome to LIVE2GETHER Serviced Apartments. We provide BROKERAGE FREE platform for renting flats and services no one can complete.&#9962;</em></strong><br><br>
-				
-				<p>&#10148;Some of the cool features are:<br> Free Wifi | Free Laundry | Free Cleaning | Pick n Drop | Delivery Services<br><br>&#10148;Amenities you get at LIVE2GETHER :<br>
-				TV | AC | FRIDGE | SOFA | WATER PURIFIER | KITCHEN | PRIVACY | BEAUTIFUL INTERIORS</p><br>
+			<fieldset>
+				<legend>Preferences</legend>
+				<strong><em>&#9962;Welcome to LIVE2GETHER Serviced Apartments. We provide BROKERAGE FREE platform
+						for renting flats and services no one can complete.&#9962;</em></strong><br><br>
+				<p>&#10148;Some of the cool features are:<br> Free Wifi | Free Laundry | Free Cleaning | Pick n Drop
+					| Delivery Services<br><br>&#10148;Amenities you get at LIVE2GETHER :<br>
+					TV | AC | FRIDGE | SOFA | WATER PURIFIER | KITCHEN | PRIVACY | BEAUTIFUL INTERIORS</p><br>
 				<ol type="1">
-				<li><em>Preffered Location:&nbsp;&nbsp;</em>
-				<label>a</label>
-				<input type= text id="pl" name="loc">
-				<label>b</label>
-				<input type= text id="pl1" name="loc1">
-				<label>c</label>
-				<input type= text id="pl2" name="loc2"></li><br>
-				
-				<li><em>Interiors</em>
-				<input type ="radio" id="Int1" name="INT" value="uf">
-				<label> Un-Furnished</label>
-				<input type ="radio" id="Int2" name="INT" value="sf">
-				<label> Semi-Furnished</label>
-				<input type ="radio" id="Int3" name="INT" value="ff">
-				<label> Fully-Furnished</label></li><br>
-				
-				<li><em> Room-Type</em>
-				<input type ="radio" id="rt1" name="rt" value="sr">
-				<label> Sharing</label>
-				<input type ="radio" id="rt2" name="rt" value="pr">
-				<label> Personal</label><br><br>
-				
-				<li><strong>Referral:</strong></li>
-				<span>If you refer LIVE2GETHER to any of your friend, you earn <strong>₹1000</strong></span><br><br><br>
-				
-				<span><strong> We’ll shortly launch our services. </strong><span><br><br>
-				<label> Name </label><input type="text" id="name" name="n1">
-				<label> Contact Details </label><input type="number" id="num" name="num1" max="12">
-				<br><br>
-				
-				<label> Occupation </label><input type="text" id="occ" name="oc1">
-			      <label> Expected Rent</label><input type="number" id="num" name="num1" max="6"><br><br>
-			      <textarea rows="4" cols="50" >Remarks</textarea><br><br><br><br>
-				
-				<strong>We’ll inform you as soon as we launch our services.<br>Team<br>LIVE2GETHER </strong><br><br>
-				
+					<li><em>Preffered Location:&nbsp;&nbsp;</em>
+						<label for="preferred-location-a"><input id="preferred-location-a" type="text"
+								name="preferred-location">a</label>
+						<label for="preferred-location-b"><input id="preferred-location-b" type="text"
+								name="preferred-location">b</label>
+						<label for="preferred-location-c"><input id="preferred-location-c" type="text"
+								name="preferred-location">c</label>
+					</li>
+					<li><em>Interiors</em>
+						<label for="interior-unfurnished"><input id="interior-unfurnished" type="radio" name="interiors"
+								value="un-furnished">Un-Furnished</label>
+						<label for="interior-semi-furnished"><input id="interior-semi-furnished" type="radio"
+								name="interiors" value="semi-furnished">Semi-Furnished</label>
+						<label for="interior-fully-furnished"><input id="interior-fully-furnished" type="radio"
+								name="interiors" value="fully-furnished">Fully-Furnished</label>
+					</li>
+					<li><em> Room-Type</em>
+						<label for="room-type-sharing"><input id="room-type-sharing" type="radio" name="room-type"
+								value="sharing">Sharing</label>
+						<label for="room-type-personal"><input id="room-type-personal" type="radio" name="room-type"
+								value="personal">Personal</label>
+					<li><strong>Referral:</strong></li>
+					<span>If you refer LIVE2GETHER to any of your friend, you earn
+						<strong>₹1000</strong></span>
+			</fieldset>
+			<fieldset>
+				<legend>Contact Details</legend>
+				<span><strong> We’ll shortly launch our services. </strong></span><br><br>
+				<label for="contact-name"><input id="contact-name" type="text" placeholder="Contact Name">Contact
+					Name:</label>
+				<label for="contact-number"><input id="contact-number" type="tel" placeholder="Contact number">Contact
+					Number:</label>
+				<label for="occupation"><input id="occupation" type="text" placeholder="Occupation">Occupation:</label>
+				<label for="expected-rent"><input id="expected-rent" type="text" placeholder="Expected Rent">Expected
+					Rent:</label>
+				<label for="remarks"><textarea id="remarks" rows="4" cols="50"
+						placeholder="Significant Details if any"></textarea> Remarks</label>
+				<strong>We’ll inform you as soon as we launch our services.<br>Team<br>LIVE2GETHER
+				</strong>
 				<label>DATE</label>
 				<input type="date" id="dd" name="dd1">
-				<label> &nbsp;&nbsp;&nbsp;&nbsp;Survey Done By <label>
-				<input type ="text" id="sign" name="sign1"><br><br>
-				
-				 <input type="submit" value="Submit">
-				  <input type="reset" value="Reset">
-				
-				
-				
-				
-				
+				<label for="survey-done-by">Survey Done By:
+					<select name="survey-done" id="survey-done-by">
+						<option value="Select">Select</option>
+						<option value="Aman Garg">Aman Garg</option>
+						<option value="Adityanand Singh">Adityanand Singh</option>
+						<option value="Rajat Dixit">Rajat Dixit</option>
+						<option value="Prakash Mishra">Prakash Mishra</option>
+					</select></label>
+				<button type="submit" value="Submit">Submit</button>
+				<button type="reset" value="Reset">Reset</button>
+				<button type="button" value="">Show Form Data</button> <!--Should Open new window to show Form Data-->
 			</fieldset>
 		</form>
-		</div>
-		</body>
+	</main>
+</body>
 </html>
